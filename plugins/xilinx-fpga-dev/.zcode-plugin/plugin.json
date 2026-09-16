@@ -22,6 +22,5 @@
     "rtl",
     "mcp"
   ],
-  "skills": "skills",
-  "mcpServers": ".mcp.json"
+  "skills": "skills"
 }

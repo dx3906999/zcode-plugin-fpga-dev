@@ -1,11 +1,10 @@
 {
   "name": "zcode-plugin-fpga-dev",
   "description": "ZCode marketplace: AMD/Xilinx FPGA development workflows and MCP tooling (Vivado, Vitis HLS, Alveo/XRT, RTL verification, hardware debug).",
-  "pluginRoot": "plugins",
   "plugins": [
     {
       "name": "xilinx-fpga-dev",
-      "source": "./xilinx-fpga-dev",
+      "source": "./plugins/xilinx-fpga-dev",
       "description": "AMD/Xilinx FPGA development: 6 evidence-gated workflow skills plus a zero-dependency read-only fpga-workspace MCP and an optional pinned Vivado automation MCP. Works on Windows (one-time interpreter switch) and Linux/macOS/WSL out of the box."
     }
   ]

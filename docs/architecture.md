@@ -2,7 +2,7 @@
 
 ## Loading model
 
-`zcode-plugin-fpga-dev` is a GitHub-hosted ZCode marketplace. Its root `marketplace.json` points to `plugins/xilinx-fpga-dev`, whose `.zcode-plugin/plugin.json` manifest exposes Skills and MCP servers through ZCode-native fields.
+`zcode-plugin-fpga-dev` is a GitHub-hosted ZCode marketplace. Its root `marketplace.json` points to `plugins/xilinx-fpga-dev` via a full repo-relative `source` path — deliberately **without** `pluginRoot`, because ZCode's marketplace components parse that field inconsistently (the desktop reader accepts a top-level `pluginRoot`, the install-time CLI reader only honors `metadata.pluginRoot`), while full-path sources resolve identically everywhere. The plugin's `.zcode-plugin/plugin.json` manifest lists its Skills; MCP servers are auto-discovered from the plugin-root `.mcp.json`.
 
 ```text
 ZCode

@@ -57,8 +57,12 @@ def main() -> int:
     manifest = load_json(manifest_path)
     if manifest.get("name") != PLUGIN.name:
         fail("plugin folder and manifest name differ")
-    if manifest.get("skills") != "skills" or manifest.get("mcpServers") != ".mcp.json":
+    if manifest.get("skills") != "skills":
         fail("plugin component paths are missing")
+    if "mcpServers" in manifest:
+        fail("manifest mcpServers field is fragile across ZCode loaders; keep the root .mcp.json instead")
+    if not (PLUGIN / ".mcp.json").is_file():
+        fail("plugin-root .mcp.json is missing")
 
     mcp_config = load_json(PLUGIN / ".mcp.json")
     servers = mcp_config.get("mcpServers", {})
@@ -110,8 +114,10 @@ def main() -> int:
     marketplace = load_json(REPO / "marketplace.json")
     entries = {entry["name"]: entry for entry in marketplace.get("plugins", [])}
     entry = entries.get(PLUGIN.name)
-    if not entry or entry.get("source") != f"./{PLUGIN.name}":
-        fail("marketplace entry does not resolve to plugin")
+    if not entry or entry.get("source") != f"./plugins/{PLUGIN.name}":
+        fail("marketplace entry source must be the full repo-relative path ./plugins/<name>")
+    if "pluginRoot" in marketplace or "pluginRoot" in marketplace.get("metadata", {}):
+        fail("marketplace pluginRoot is parsed inconsistently across ZCode components; use full-path sources only")
 
     server = PLUGIN / "mcp" / "fpga_workspace_server.py"
     check_stdio_server([sys.executable, str(server)], "fpga_discover_project")
