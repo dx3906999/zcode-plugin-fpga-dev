@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Packaging / build
+build/
+dist/
+
+# Vivado batch artifacts
+*.jou
+*.str
+*.log
+*.bak
+*.xpr.user/
+user/
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+
+# Vivado build outputs (a plugin repo ships no designs)
+*.bit
+*.ltx
+*.xsa
+*.dcp
+*.wdb
+*.wcfg
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Plugin runtime caches
+.codex-fpga/
+.zcode-fpga/

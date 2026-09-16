@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "fpga-workspace": {
+      "type": "stdio",
+      "command": "python3",
+      "args": [
+        "${ZCODE_PLUGIN_ROOT}/mcp/fpga_workspace_server.py"
+      ],
+      "timeoutMs": 120000
+    },
+    "vivado": {
+      "type": "stdio",
+      "command": "python3",
+      "args": [
+        "${ZCODE_PLUGIN_ROOT}/scripts/run_vivado_mcp.py"
+      ],
+      "timeoutMs": 3600000
+    }
+  }
+}

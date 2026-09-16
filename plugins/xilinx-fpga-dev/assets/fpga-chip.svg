@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="FPGA chip">
+  <rect width="128" height="128" rx="24" fill="#111827"/>
+  <rect x="28" y="28" width="72" height="72" rx="10" fill="#E53935"/>
+  <path fill="#fff" d="M44 43h40v10H55v12h25v10H55v18H44z"/>
+  <g stroke="#9CA3AF" stroke-width="6" stroke-linecap="round">
+    <path d="M16 36h12M16 56h12M16 76h12M16 96h12M100 36h12M100 56h12M100 76h12M100 96h12M36 16v12M56 16v12M76 16v12M96 16v12M36 100v12M56 100v12M76 100v12M96 100v12"/>
+  </g>
+</svg>

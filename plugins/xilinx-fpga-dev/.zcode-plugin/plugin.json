@@ -1,0 +1,27 @@
+{
+  "name": "xilinx-fpga-dev",
+  "version": "0.1.0",
+  "description": "ZCode workflows and MCP tooling for AMD/Xilinx FPGA, Vivado, Vitis HLS/embedded, PetaLinux, Alveo/XRT, RTL verification, and hardware debug.",
+  "description_i18n": {
+    "zh-CN": "AMD/Xilinx FPGA 开发插件：Vivado 流程、Vitis HLS、Alveo/XRT 加速、RTL 验证、硬件调试六套工作流技能，附带只读 fpga-workspace MCP 与可选 Vivado 自动化 MCP。Windows 与 Linux/macOS/WSL 双平台适配。",
+    "en": "ZCode-native development workflows for AMD/Xilinx FPGA projects, backed by a read-only local project-analysis MCP and an optional pinned Vivado automation MCP."
+  },
+  "author": {
+    "name": "dx3906999"
+  },
+  "license": "MIT",
+  "keywords": [
+    "amd",
+    "xilinx",
+    "fpga",
+    "vivado",
+    "vitis",
+    "hls",
+    "alveo",
+    "xrt",
+    "rtl",
+    "mcp"
+  ],
+  "skills": "skills",
+  "mcpServers": ".mcp.json"
+}
